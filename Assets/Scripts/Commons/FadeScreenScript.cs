@@ -2,11 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 using com.lovelydog;
-using com.lovelydog.movieschallenge;
 
-
-public class FadeScreenScript : FacadeMonoBehaviour {
-
+public class FadeScreenScript : FacadeMonoBehaviour 
+{
 	public float defaultTime = .1f;
 	CanvasGroup panel;
 

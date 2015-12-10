@@ -20,14 +20,14 @@ namespace com.lovelydog
 
 		public static void fadeInPanel (MonoBehaviour context, CanvasGroup canvas, float aTime, Action callback) {
 			context.StartCoroutine (Utils.fadePanel (canvas, aTime, () => {
-				Utils.showCanvas(canvas);
+				Utils.show(canvas);
 				callback();
 			}, 1f));
 		}
 
 		public static void fadeOutPanel (MonoBehaviour context, CanvasGroup canvas, float aTime, Action callback) {
 			context.StartCoroutine (Utils.fadePanel (canvas, aTime, () => {
-				Utils.hideCanvas(canvas);
+				Utils.hide(canvas);
 				callback();
 			}, 0f));
 		}
@@ -75,7 +75,7 @@ namespace com.lovelydog
 			return (str.Length > limit) ? str.Substring(0, (limit - 1)) + "..." : str;
 		}
 
-		public static void hideCanvas(CanvasGroup canvas) {
+		public static void hide(CanvasGroup canvas) {
 			if (canvas != null) {
 				canvas.interactable = false;
 				canvas.blocksRaycasts = false;
@@ -83,7 +83,7 @@ namespace com.lovelydog
 			}
 		}
 
-		public static void showCanvas(CanvasGroup canvas) {
+		public static void show(CanvasGroup canvas) {
 			if (canvas != null) {
 				canvas.alpha = 1f;
 				canvas.interactable = true;

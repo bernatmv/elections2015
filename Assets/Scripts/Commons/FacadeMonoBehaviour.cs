@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using com.lovelydog;
 
-namespace com.lovelydog.movieschallenge
+namespace com.lovelydog
 {
 	public class FacadeMonoBehaviour : MonoBehaviour {
 		// instantiate singletons

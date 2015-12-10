@@ -4,11 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-// Developed by Lovely Dog Studio
-namespace com.lovelydog {
-
-	public sealed class Dispatcher<T> {
-
+namespace com.lovelydog 
+{
+	public sealed class Dispatcher<T> 
+	{
 		// properties
 		private static readonly Dispatcher<T> _instance = new Dispatcher<T>();
 		private Dictionary<string, List<Action<T>>> _signal = new Dictionary<string, List<Action<T>>>();

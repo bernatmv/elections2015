@@ -3,8 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-// Developed by Lovely Dog Studios
-namespace com.lovelydog.movieschallenge 
+namespace com.lovelydog 
 {
 	public sealed class World {
 

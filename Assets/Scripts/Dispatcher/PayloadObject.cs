@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System;
 
-// Developed by Lovely Dog Studio
-namespace com.lovelydog {
-	
-	public class PayloadObject : UnityEngine.Object {
-		
+namespace com.lovelydog 
+{
+	public class PayloadObject : UnityEngine.Object 
+	{
 		public Action action;
 		public int intPayload;
 		public float floatPayload;
