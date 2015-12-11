@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 
@@ -48,15 +49,15 @@ namespace com.lovelydog
 		public void loadScene(string scene) {
 			// reset dispatcher
 			_dispatcher.Reset ();
-			// load level
-			Application.LoadLevel(scene);
+			// load scene
+			SceneManager.LoadScene(scene);
 		}
 
 		public void reloadScene() {
 			// reset dispatcher
 			_dispatcher.Reset ();
-			// load level
-			Application.LoadLevel(Application.loadedLevel);
+            // load scene
+            SceneManager.SetActiveScene(SceneManager.GetActiveScene());
 		}
 		
 		public static void delayAction(MonoBehaviour context, Action callback, float seconds) {
