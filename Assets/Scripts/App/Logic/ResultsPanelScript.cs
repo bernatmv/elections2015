@@ -18,6 +18,6 @@ public class ResultsPanelScript : FacadeMonoBehaviour
     {
         Utils.show(canvas);
         result.text = Properties.parties[0].name + " " + Properties.parties[0].ProgressiveVSConservative + " " + Properties.parties[0].LeftVSRight;
-
+        // to remove
     }
 }
