@@ -57,7 +57,7 @@ namespace com.lovelydog
 			// reset dispatcher
 			_dispatcher.Reset ();
             // load scene
-            SceneManager.SetActiveScene(SceneManager.GetActiveScene());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 		
 		public static void delayAction(MonoBehaviour context, Action callback, float seconds) {

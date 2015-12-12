@@ -9,9 +9,17 @@ public class MainPanelScript : FacadeMonoBehaviour
     void Awake()
     {
         canvas = transform.GetComponent<CanvasGroup>();
+        _dispatcher.AddListener("hide_main", Hide);
+        _dispatcher.AddListener("show_main", Show);
     }
 
-    void Start()
+    void Hide(Object param = default(Object))
     {
+        Utils.hide(canvas);
+    }
+
+    void Show(Object param = default(Object))
+    {
+        Utils.show(canvas);
     }
 }

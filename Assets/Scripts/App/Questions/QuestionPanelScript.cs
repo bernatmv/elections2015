@@ -9,10 +9,17 @@ public class QuestionPanelScript : FacadeMonoBehaviour
     void Awake()
     {
         canvas = transform.GetComponent<CanvasGroup>();
+        _dispatcher.AddListener("hide_question", Hide);
+        _dispatcher.AddListener("show_question", Show);
     }
 
-	void Start ()
+    void Hide(Object param = default(Object))
     {
         Utils.hide(canvas);
-	}
+    }
+
+    void Show(Object param = default(Object))
+    {
+        Utils.show(canvas);
+    }
 }

@@ -12,12 +12,17 @@ public class ResultsPanelScript : FacadeMonoBehaviour
     {
         canvas = transform.GetComponent<CanvasGroup>();
         result = transform.GetComponentInChildren<Text>();
+        _dispatcher.AddListener("hide_results", Hide);
+        _dispatcher.AddListener("show_results", Show);
     }
 
-	void Start ()
+    void Hide(Object param = default(Object))
+    {
+        Utils.hide(canvas);
+    }
+
+    void Show(Object param = default(Object))
     {
         Utils.show(canvas);
-        result.text = Properties.parties[0].name + " " + Properties.parties[0].ProgressiveVSConservative + " " + Properties.parties[0].LeftVSRight;
-        // to remove
     }
 }
