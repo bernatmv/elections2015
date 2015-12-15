@@ -9,10 +9,9 @@ public class AppLogic : FacadeMonoBehaviour
     void Awake()
     {
         _dispatcher.AddListener("start", StartQuiz);
-        _dispatcher.AddListener("next_question", StartQuiz);
     }
 
-    void StartQuiz(Object param)
+	void StartQuiz(Object param = default(Object))
     {
         _dispatcher.Dispatch("show_question");
         _dispatcher.Dispatch("hide_main");
