@@ -116,20 +116,54 @@ public static class Properties
 			-2,-2,-2,-1,2,-2,-2,-2,-2,-1,-1,-1,-2,-1,-2,-2
 		}),
 		new PoliticalParty("PACMA", "pacma", new int[] {
+			2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0
 		})
     };
     // questions
     public static Question[] questions = new Question[]
     {
 		// question, mode (LvsR = 1, PvsC = 2), inverted (inverted question 1/-1)
-        new Question("Más pasta escuela pública, menos concertada", 1, 1)
+        new Question("Más pasta escuela pública, menos concertada", 1, 1),
+		new Question("Sin copago sanitario", 1, 1),
+		new Question("Dación en pago", 1, 1),
+		new Question("Políticos cobrar menos", 1, 1),
+		new Question("Sanidad para inmigrantes sin papeles", 1, 1),
+		new Question("No reducir gasto social para crecer", 1, 1),
+		new Question("Más impuestos para más servicios", 1, 1),
+		new Question("Estado interviene en la economia", 1, 1),
+		new Question("Redistribución de la riqueza", 1, 1),
+		new Question("Austeridad impide crecer", 1, 1),
+		new Question("Impedir privatizaciones", 1, 1),
+		new Question("Blindar el despido", 1, 1),
+		new Question("Sindicatos correctos", 1, 1),
+		new Question("Bajar edad de jubilación", 1, 1),
+		new Question("Mejorar permiso maternidad / paternidad", 1, 1),
+		new Question("Aumentar salario mínimo", 1, 1),
+		// PvsC
+		new Question("Monarquía no, república sí", 2, 1),
+		new Question("Independencia por referéndum", 2, 1),
+		new Question("Aborto sin restricciones", 2, 1),
+		new Question("Eutanasia", 2, 1),
+		new Question("Mejor dentro Europa", 2, 1),
+		new Question("Derecho de manifestación sagrado", 2, 1),
+		new Question("Contra la cadena perpétua", 2, 1),
+		new Question("Lucha contra la inmigración", 2, 1),
+		new Question("Escuela sin religión", 2, 1),
+		new Question("Candidatos por primarias", 2, 1),
+		new Question("Lucha contra la corrupción", 2, 1),
+		new Question("Medioambiente prioritario", 2, 1),
+		new Question("Antitaurinos (animalistas)", 2, 1),
+		new Question("Contra la recentralización", 2, 1),
+		new Question("El senado debería desaparecer", 2, 1),
+		new Question("Menos bipartidismo", 2, 1)
     };
     // colors
 	public static Color bgColor = newRGBColor(255, 255, 255);
     public static Color[] questionColors = {
 		// les preguntes alternen el color de fons en funció dels colors pastel (eliminar conflictius)
 		newRGBColor(149,100,173),
-		newRGBColor(244,111,110),
+		//newRGBColor(244,111,110),
 		newRGBColor(31,184,222),
 		newRGBColor(27,211,177),
 		newRGBColor(250,187,59)

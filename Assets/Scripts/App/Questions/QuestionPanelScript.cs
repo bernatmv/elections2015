@@ -19,7 +19,7 @@ public class QuestionPanelScript : FacadeMonoBehaviour
 
 	void SetQuestion(Object param = default(Object))
 	{
-		bg.color = Properties.questionColors[((PayloadObject)param).intPayload % 5];
+		bg.color = Properties.questionColors[((PayloadObject)param).intPayload % Properties.questionColors.Length];
 	}
 
     void Hide(Object param = default(Object))
