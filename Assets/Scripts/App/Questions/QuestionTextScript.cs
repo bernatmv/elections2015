@@ -7,11 +7,14 @@ public class QuestionTextScript : FacadeMonoBehaviour
 {
 	Text question;
 
-	void Awake() {
+	void Awake() 
+	{
 		question = transform.GetComponent<Text> ();
+		_dispatcher.AddListener("set_question", SetQuestion);
 	}
 
-	void Start() {
-		question.text = "boooo";
+	void SetQuestion(Object param = default(Object))
+	{
+		question.text = Properties.questions [((PayloadObject)param).intPayload].question;
 	}
 }

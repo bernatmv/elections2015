@@ -4,7 +4,7 @@ using com.lovelydog;
 
 public class QuestionAnswerScript : FacadeMonoBehaviour 
 {
-	public float value = 0f;
+	public int value = 0;
 
 	CanvasGroup canvas;
 
@@ -17,7 +17,7 @@ public class QuestionAnswerScript : FacadeMonoBehaviour
 	}
 
 	public void selectThis() {
-		
+		_dispatcher.Dispatch("answer_question", new PayloadObject(value));
 	}
 
 	public void reset() {

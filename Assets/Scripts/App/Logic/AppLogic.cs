@@ -4,11 +4,15 @@ using com.lovelydog;
 
 public class AppLogic : FacadeMonoBehaviour 
 {
-    int currentQuestion = 0;
+    int currentQuestion = -1;
+	int[] answers = new int[] {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	int LvsR = 0;
+	int PvsC = 0;
 
     void Awake()
     {
         _dispatcher.AddListener("start", StartQuiz);
+		_dispatcher.AddListener("answer_question", AnswerQuestion);
     }
 
 	void StartQuiz(Object param = default(Object))
@@ -21,6 +25,23 @@ public class AppLogic : FacadeMonoBehaviour
     void NextQuestion()
     {
         currentQuestion++;
-        _dispatcher.Dispatch("next_question", new PayloadObject(currentQuestion));
+		if (currentQuestion < Properties.questions.Length) {
+			_dispatcher.Dispatch ("set_question", new PayloadObject (currentQuestion));
+		} 
+		else {
+			EndQuiz ();
+		}
     }
+
+	void AnswerQuestion(Object param = default(Object))
+	{
+		answers [currentQuestion] = ((PayloadObject)param).intPayload;
+		NextQuestion ();
+	}
+
+	void EndQuiz() 
+	{
+		_dispatcher.Dispatch("show_results");
+		_dispatcher.Dispatch("hide_question");
+	}
 }
