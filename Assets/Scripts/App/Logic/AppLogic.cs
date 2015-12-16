@@ -42,6 +42,8 @@ public class AppLogic : FacadeMonoBehaviour
 	void EndQuiz() 
 	{
 		_dispatcher.Dispatch("show_results");
+		_dispatcher.Dispatch("results_party", new PayloadObject(0));
+		_dispatcher.Dispatch("results_party_affinity", new PayloadObject(69));
 		_dispatcher.Dispatch("hide_question");
 	}
 }
